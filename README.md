@@ -5,7 +5,7 @@
 ## Setup
 
 ```sh
-# Install dependencies
+# Install dependenciesawreasdf
 npm install
 
 # Run typescript
