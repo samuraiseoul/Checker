@@ -1,13 +1,13 @@
 import { Application } from 'probot';
 
-export default function(application: Application) {
-    application.on('pull_request.opened', async (context) => {
-        console.log(context);
+export = function(application: Application) {
+    application.on(['pull_request.opened', 'pull_request.reopened'], async function handleOpening (context) {
+        console.log(context.payload);
 
-        // const checkPayload = context.repo({ name : 'Checker', 'head_sha' : context.payload.pull_request.head_sha });
-        // const checkListComment = context.repo({ body : 'poop', 'commit_id' : context.payload.sha });
+        const checkPayload = context.repo({ name : 'Checker', 'head_sha' : context.payload.pull_request.head.sha });
+        await context.github.checks.create(checkPayload);
 
-        // const issueComment = context.issue({ body: 'Thanks for opening this issue!' });
-        // await context.github.issues.createComment(issueComment);
-    })
+        const checkListComment = context.issue({ body : '- [ ] Make more checklist stuff!' });
+        await context.github.issues.createComment(checkListComment);
+    });
 }
