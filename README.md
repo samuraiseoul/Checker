@@ -8,8 +8,8 @@
 # Install dependencies
 npm install
 
-# Run typescript
-npm run build
+# Run typescriptASDADsa
+npm run buildAD
 
 # Run the bot
 npm start
