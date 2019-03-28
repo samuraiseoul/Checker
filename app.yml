@@ -40,7 +40,7 @@ default_events:
   - pull_request_review_comment
   - push
 # - release
-# - repository
+  - repository
 # - repository_import
 # - status
 # - team
@@ -98,7 +98,7 @@ default_permissions:
 
   # Commit statuses.
   # https://developer.github.com/v3/apps/permissions/#permission-on-statuses
-  # statuses: read
+  statuses: write
 
   # Organization members and teams.
   # https://developer.github.com/v3/apps/permissions/#permission-on-members
