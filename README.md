@@ -8,7 +8,7 @@
 # Install dependencies
 npm install
 
-# Run typescript
+# Run typescriptasasasddasdcacv sZv
 npm run build
 
 # Run the bot
