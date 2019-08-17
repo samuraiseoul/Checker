@@ -7,7 +7,7 @@
     "target": "es5",
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "noUnusedLocals": false,
+    "noUnusedLocals": false,dfg
     "pretty": true,
     "strict": true,
     "sourceMap": true,
